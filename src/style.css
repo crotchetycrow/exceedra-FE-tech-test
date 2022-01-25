@@ -56,7 +56,7 @@ nav {
   color: var(--clr-text);
 }
 
-nav ul {
+.nav-links ul {
   display: flex;
   list-style: none;
   margin: 0;
@@ -64,22 +64,23 @@ nav ul {
 }
 
 nav a {
-  display: inline-block;
+  display: block;
   padding: 0.5rem;
   color: var(--clr-primary);
   text-decoration: none;
 }
 
-nav a:hover,
-nav a:focus {
+.nav-links li:hover {
   background-color: var(--clr-text);
 }
 
-/* .toggle-btn {
+/* HAMBURGER MENU WHEN SCREEN IS LESS THAN 600px */
+
+.toggle-btn {
   position: absolute;
   top: 0.75rem;
   right: 1rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -91,4 +92,14 @@ nav a:focus {
   width: 100%;
   background-color: var(--clr-text);
   border-radius: 10px;
-} */
+}
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    display: flex;
+  }
+
+  .nav ul {
+    display: none;
+  }
+}
