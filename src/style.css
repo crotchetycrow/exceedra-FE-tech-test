@@ -1,7 +1,7 @@
 :root {
-  --clr-text: #adb18c;
+  --clr-text: #c6ad92;
   --clr-primary: #8caa44;
-  --clr-accent: #926d46;
+  --clr-accent: #adb18c;
 
   --ff-title: "Crimson Text", sans-serif;
   --ff-serif: "Crimson Text", serif;
@@ -41,3 +41,54 @@ h2 {
 p {
   margin-bottom: 0.85em;
 }
+
+/* NAV */
+.logo {
+  font-size: 3rem;
+  margin: 0.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-accent);
+  color: var(--clr-text);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--clr-text);
+}
+
+/* .toggle-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-btn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--clr-text);
+  border-radius: 10px;
+} */
