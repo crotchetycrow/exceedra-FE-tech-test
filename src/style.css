@@ -1,3 +1,11 @@
+:root {
+  --clr-text: #adb18c;
+  --clr-primary: #8caa44;
+  --clr-accent: #926d46;
+
+  --ff-serif: "Crimson Text", serif;
+}
+
 *,
 *::before,
 *::after {
@@ -6,5 +14,6 @@
 
 html {
   box-sizing: border-box;
-  font-family: "Crimson Text", serif;
+  font-family: var(--ff-serif);
+  color: var(--clr-text);
 }
