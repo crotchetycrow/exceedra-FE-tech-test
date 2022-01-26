@@ -1,10 +1,10 @@
 :root {
-  --clr-text: #c6ad92;
-  --clr-primary: #8caa44;
-  --clr-accent: #adb18c;
+  --clr-text: #262626;
+  --clr-primary: #e2e8ce;
+  --clr-accent: #acbfa4;
 
-  --ff-title: "Crimson Text", sans-serif;
-  --ff-serif: "Crimson Text", serif;
+  --ff-title: "Bahnschrift SemiBold", sans-serif;
+  --ff-serif: "Bahnschrift SemiBold", sans-serif;
 }
 
 *,
@@ -25,7 +25,7 @@ h1,
 h2,
 h3,
 p {
-  margin: 0;
+  margin: 0.5rem;
 }
 
 h2,
@@ -43,40 +43,53 @@ p {
 }
 
 /* NAV */
-.logo {
-  font-size: 3rem;
-  margin: 0.5rem;
+.navbar {
+  display: flex;
+  position: relative;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-primary);
+  color: var(--clr-accent);
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--clr-accent);
+.brand-title a {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
   color: var(--clr-text);
 }
 
-.nav-links ul {
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
   display: flex;
-  list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
 }
 
-nav a {
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
   display: block;
-  padding: 0.5rem;
-  color: var(--clr-primary);
   text-decoration: none;
+  color: var(--clr-text);
+  padding: 2rem;
 }
 
-.nav-links li:hover {
-  background-color: var(--clr-text);
+.navbar-links li:hover {
+  background-color: var(--clr-accent);
+  border-style: solid;
+  border-width: thick;
+  border-bottom: var(--clr-primary);
 }
 
-/* HAMBURGER MENU WHEN SCREEN IS LESS THAN 600px */
-
-.toggle-btn {
+.toggle-button {
   position: absolute;
   top: 0.75rem;
   right: 1rem;
@@ -87,19 +100,42 @@ nav a {
   height: 21px;
 }
 
-.toggle-btn .bar {
+.toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: var(--clr-text);
+  background-color: var(--clr-accent);
   border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  .toggle-btn {
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
     display: flex;
   }
 
-  .nav ul {
+  .navbar-links {
     display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
   }
 }
