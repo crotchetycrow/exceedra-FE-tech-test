@@ -19,6 +19,10 @@ html {
   color: var(--clr-text);
 }
 
+body {
+  margin: 0;
+}
+
 /* TYPOGRAPHY */
 
 h1,
@@ -138,4 +142,9 @@ p {
   .navbar-links.active {
     display: flex;
   }
+}
+
+/* FORM */
+
+.reg-container {
 }
