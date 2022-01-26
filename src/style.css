@@ -225,7 +225,24 @@ p {
   color: var(--clr-text);
   cursor: pointer;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   transition: 0.5s;
+  border-radius: 5%;
+}
+
+.reg-container .user .reg-box #user-details .login {
+  position: reltaive;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--clr-text);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.reg-container .user .reg-box #user-details .login a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
 }
