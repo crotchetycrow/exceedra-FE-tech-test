@@ -272,3 +272,54 @@ p {
 .reg-container.active .sign-in .img-box {
   right: 0;
 }
+
+/* FOOTER */
+
+footer {
+  background: var(--clr-primary);
+  padding: 3em 1em;
+  color: var(--clr-text);
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-icon {
+  max-width: 20px;
+}
+
+.social-icon {
+  width: 50px;
+}
+
+footer a {
+  color: inherit;
+}
+
+.mid-container .footer-nav {
+  list-style: none;
+}
+
+.footer-nav a {
+  padding: 0.75em;
+  text-decoration: none;
+}
+
+.right-container .footer-social {
+  list-style: none;
+  padding: 5px;
+}
+
+.left-container h5 {
+  font-size: 18px;
+  margin-left: 0.5em;
+}
+
+.left-container p {
+  padding-bottom: 15px;
+  max-width: 250px;
+}
+
+.left-container .info-icon {
+  max-width: 20px;
+  max-height: 20px;
+}
