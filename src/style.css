@@ -273,6 +273,20 @@ p {
   right: 0;
 }
 
+@media (max-width: 991px) {
+  .reg-container {
+    max-width: 400px;
+  }
+
+  .reg-container .img-box {
+    display: none;
+  }
+
+  .reg-container .form-box {
+    width: 100%;
+  }
+}
+
 /* FOOTER */
 
 footer {
