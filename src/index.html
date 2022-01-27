@@ -44,31 +44,58 @@
           <p></p>
         </div>
       </section>
-      <div class="reg-container">
 
-        <section class="register">
-          <header>
-            <h2 class="section-title"></h2>
-          </header>
-            <form action="" id="user-details"> 
-              <!-- To connect to my API -->
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <section class="register">
+          <div class="reg-container">
+              <div class="user sign-up">
+                <div class="img-box"><img src="/src/img/310075.svg" alt="" height="500px" width="800px"></div>
+                  <div class="form-box">
+                    <form action=""> 
+                      <!-- To connect to my API -->
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
           
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                      <label for="email">Email Address</label>
+                      <input type="text" id="email" name="emailAddress" placeholder="example@email.com">
+          
+                      <label for="password">Create Password</label>
+                      <input type="password" id="password" placeholder="Password">
+                      
+                      <label for="password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm password">
 
-              <label for="email">Email Address</label>
-              <input type="text" id="email" name="emailAddress" placeholder="example@email.com">
+                      <input type="submit" value="Register">
+      
+                      <p class="login">Already have an account? <a href="#" onclick="setToggle()">Log in</a></p>
+                    </form>
+                  </div>
+              </div>
 
-              <label for="password">Password</label>
-              <input type="password" id="password" placeholder="Password">
+              <div class="user sign-in">
+                <div class="form-box">
+                  <form action=""> 
+                    
+                    <label for="email">Email Address</label>
+                    <input type="text" id="log-email" name="emailAddress" placeholder="example@email.com">
+                    
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="log-password" placeholder="Password">
+                    
+                    <input type="submit" value="Log in">
+                    
+                    <p class="login">Don't have an account? <a href="#" onclick="setToggle()">Sign up</a></p>
+                  </form>
+                </div>
+                <div class="img-box"><img src="/src/img/310075.svg" alt="" height="500px" width="800px"></div>
+              </div>
 
-              <input type="submit" value="Submit">
-            </form>
+            </div>
         </section>
         
-      </div>
+
 
       <footer>
         <ul class="footer-nav">
@@ -91,5 +118,6 @@
 
 
   <script src="/src/index.js"></script>
+
 </body>
 </html>
