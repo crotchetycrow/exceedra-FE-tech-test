@@ -249,19 +249,15 @@ p {
 
 /* LOG IN BOX */
 
-/* .reg-container .sign-in .form-box {
-  display: none;
+.reg-container .sign-in {
+  pointer-events: none;
 }
-
-.reg-container .sign-in .img-box {
-  display: none;
-} */
 
 .reg-container.active .sign-in {
-  display: none;
+  pointer-events: initial;
 }
 
-/* .reg-container .sign-in .form-box {
+.reg-container .sign-in .form-box {
   right: 100%;
 }
 
@@ -274,5 +270,5 @@ p {
 }
 
 .reg-container.active .sign-in .img-box {
-  left: 0;
-} */
+  right: 0;
+}
