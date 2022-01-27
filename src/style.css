@@ -190,7 +190,7 @@ p {
   object-fit: cover;
 }
 
-.reg-container .user .reg-box {
+.reg-container .user .form-box {
   position: relative;
   width: 50%;
   height: 100%;
@@ -201,11 +201,11 @@ p {
   transition: 0.5s;
 }
 
-.reg-container .user .reg-box #reg-details {
+.reg-container .user .form-box #user-details {
   margin: 10px;
 }
 
-.reg-container .user .reg-box #reg-details input {
+.reg-container .user .form-box #user-details input {
   /* display: inline-grid; */
   position: relative;
   width: 100%;
@@ -219,7 +219,7 @@ p {
   font-weight: 300;
 }
 
-.reg-container .user .reg-box #reg-details input[type="submit"] {
+.reg-container .user .form-box #user-details input[type="submit"] {
   max-width: 100px;
   background: var(--clr-accent);
   color: var(--clr-text);
@@ -231,8 +231,8 @@ p {
   border-radius: 5%;
 }
 
-.reg-container .user .reg-box #reg-details .login {
-  position: reltaive;
+.reg-container .user .form-box #user-details .login {
+  position: relative;
   margin-top: 20px;
   font-size: 12px;
   letter-spacing: 1px;
@@ -241,7 +241,7 @@ p {
   font-weight: 300;
 }
 
-.reg-container .user .reg-box #reg-details .login a {
+.reg-container .user .form-box #user-details .login a {
   font-weight: 600;
   text-decoration: none;
   color: #677eff;
@@ -249,32 +249,18 @@ p {
 
 /* LOG IN BOX */
 
-.reg-container .sign-in {
-  position: relative;
-  float: left;
-  width: 50%;
-  height: 100%;
-  background: var(--clr-accent);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
+.reg-container .sign-in .form-box {
+  left: 100%;
 }
 
-.reg-container .log-img-box {
-  float: right;
-  position: relative;
-  width: 50%;
-  height: 100%;
-  background: var(--clr-primary);
-  transition: 0.5s;
-}
-
-.reg-container .user .log-img-box img {
-  position: absolute;
-  top: 0;
+.reg-container.active .sign-in .form-box {
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+}
+
+.reg-container .sign-in .img-box {
+  left: -100%;
+}
+
+.reg-container.active .sign-in .img-box {
+  left: 0;
 }
