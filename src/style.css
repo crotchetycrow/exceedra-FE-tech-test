@@ -221,7 +221,7 @@ p {
   font-weight: 300;
 }
 
-.reg-container .user .form-box form input[type="submit"] {
+.reg-container .user .form-box form button {
   max-width: 100px;
   background: var(--clr-accent);
   color: var(--clr-text);
@@ -231,6 +231,8 @@ p {
   letter-spacing: 1px;
   transition: 0.5s;
   border-radius: 5%;
+  border: none;
+  padding: 5px;
 }
 
 .reg-container .user .form-box form .login {
