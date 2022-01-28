@@ -300,6 +300,35 @@ p {
   font-weight: lighter;
 }
 
+/* JSON data */
+
+.members {
+  display: flex;
+  position: relative;
+  min-height: 30vh;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--ff-serif);
+}
+
+.members #myData {
+}
+
+.members .memName {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: left;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.members .memName .memList td {
+  width: 200px;
+}
+
 /* FOOTER */
 
 footer {
