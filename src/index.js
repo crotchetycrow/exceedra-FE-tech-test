@@ -30,7 +30,8 @@ fetch('https://mock-members-api.herokuapp.com/members')
 
 	function appendData(data) {
 		for (var i =0; i < data.length; i++) {
-			data.slice().sort((a, b) => b.points - a.points);
+      // Sort points by highest
+			data.sort((a, b) => (a.points < b.points) ? 1 : -1)
 			var table = document.createElement("tr");
 			table.classList.add('memDetails');
 			
@@ -40,16 +41,18 @@ fetch('https://mock-members-api.herokuapp.com/members')
 		}
 	}
 
-	const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+// Clickable sorting example
 
-  const comparer = (idx, asc) => (a, b) => ((v1, v2) => 
-    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
-    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+	// const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
 
-  // do the work...
-  document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
-      const table = th.closest('table');
-      Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
-          .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
-          .forEach(tr => table.appendChild(tr) );
-  })));
+  // const comparer = (idx, asc) => (a, b) => ((v1, v2) => 
+  //   v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+  //   )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+  // // do the work...
+  // document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+  //     const table = th.closest('table');
+  //     Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+  //         .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+  //         .forEach(tr => table.appendChild(tr) );
+  // })));
