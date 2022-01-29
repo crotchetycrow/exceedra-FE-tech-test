@@ -10,9 +10,3 @@ toggleButton.addEventListener('click', () => {
 function setToggle() {
   toggleForm.classList.toggle('active');
 }
-
-
-// Prevent page refresh on button click (submit does automatically)
-document.addEventListener('click', function (ev) {
-	ev.preventDefault()
-})
