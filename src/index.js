@@ -3,7 +3,13 @@ const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
 const toggleForm = document.querySelector('.reg-container');
 
+
 const mainContainer = document.getElementById("myData");
+
+var form = document.querySelector('form');
+var data = new FormData(form);
+
+
 
 // Fetching API
 
@@ -20,14 +26,55 @@ fetch('https://mock-members-api.herokuapp.com/members')
 
 // Functions
 
+// Hamburger menu
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
+// Form 'active'
 function setToggle() {
   toggleForm.classList.toggle('active');
 }
 
+
+// Form validation for empty inputs
+
+// function validateForm() {
+//   var x = document.firstname.lastname.emailAddress.value;
+//   if (x == "") {
+//     alert("Name must be filled out");
+//     return false;
+//   }
+// }
+
+// Serialising form data allowing it to console log
+
+document.addEventListener('submit', function (event) {
+
+
+  // This prevents page change, but without it data fails to fetch
+  // I think this is because there is no submit event on welcome.html
+	event.preventDefault();
+
+	fetch('https://mock-members-api.herokuapp.com/members', {
+		method: 'POST',
+		body: JSON.stringify(Object.fromEntries(new FormData(event.target))),
+		headers: {
+			'Content-type': 'application/json; charset=UTF-8'
+		}
+	}).then(function (response) {
+		if (response.ok) {
+			return response.json();
+		}
+		return Promise.reject(response);
+	}).then(function (data) {
+		console.log(data);
+	}).catch(function (error) {
+		console.warn(error);
+	});
+});
+
+// Appending data to HTML
 function appendData(data) {
 	for (var i =0; i < data.length; i++) {
 		// Sort points by highest
@@ -58,4 +105,3 @@ function appendData(data) {
           .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
           .forEach(tr => table.appendChild(tr) );
   })));
-

@@ -53,7 +53,9 @@
                 <div class="user sign-up">
                   <div class="img-box"><img src="/src/img/310075.svg" alt="" height="500px" width="800px"></div>
                     <div class="form-box">
-                      <form action="welcome.html"> 
+
+                      <form name="reg-form" action="welcome.html" required> 
+
                         <!-- To connect to my API -->
                         <label for="fname">First Name</label>
                         <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -70,7 +72,7 @@
                         <label for="password">Confirm Password</label>
                           <input type="password" id="confirm-password" placeholder="Confirm password">
 
-                        <input type="submit" value="Register">
+                          <button id="reg-btn">Register</button>
         
                         <p class="login">Already have an account? <a href="#" onclick="event.preventDefault(); setToggle();">Log in</a></p>
                       </form>
@@ -87,7 +89,7 @@
                       <label for="password">Enter Password</label>
                       <input type="password" id="log-password" placeholder="Password">
                       
-                      <input type="submit" value="Log in">
+                      <button id="log-btn">Log in</button>
                       
                       <p class="login">Don't have an account? <a href="#" onclick="event.preventDefault(); setToggle();">Sign up</a></p>
                     </form>
