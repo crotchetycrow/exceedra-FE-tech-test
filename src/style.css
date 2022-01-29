@@ -300,6 +300,56 @@ p {
   font-weight: lighter;
 }
 
+/* JSON data */
+
+.members {
+  display: flex;
+  position: relative;
+  min-height: 30vh;
+  align-items: center;
+  justify-content: left;
+  padding: 100px;
+  margin: 0;
+  font-family: var(--ff-serif);
+}
+
+.members #myData {
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+
+.members #myData th,
+.members #myData td {
+  padding: 12px 15px;
+  border: none;
+}
+
+.members #myData th {
+  background: var(--clr-primary);
+  text-align: left;
+}
+
+.members #myData .memDetails td {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 40px;
+}
+
+.members #myData tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.members #myData tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.members #myData tr:last-of-type {
+  border-bottom: 3px solid var(--clr-primary);
+}
+
 /* FOOTER */
 
 footer {
