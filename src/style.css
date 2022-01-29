@@ -313,6 +313,13 @@ p {
   font-family: var(--ff-serif);
 }
 
+.members #myData {
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+
 .members #myData th,
 .members #myData td {
   padding: 12px 15px;
@@ -336,7 +343,11 @@ p {
 }
 
 .members #myData tr:nth-of-type(even) {
-  border-bottom: 1px solid #dddddd;
+  background-color: #f3f3f3;
+}
+
+.members #myData tr:last-of-type {
+  border-bottom: 3px solid var(--clr-primary);
 }
 
 /* FOOTER */
