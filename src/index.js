@@ -26,26 +26,30 @@ fetch('https://mock-members-api.herokuapp.com/members')
 		console.log(err);
 	});
 
-	data.slice().sort((a, b) => b.points - a.points);
+	
 
 	function appendData(data) {
 		for (var i =0; i < data.length; i++) {
+			data.slice().sort((a, b) => b.points - a.points);
+			var table = document.createElement("tr");
+			table.classList.add('memDetails');
 			
-			var divName = document.createElement("div");
-			divName.classList.add('memName');
-			// var divEmail = document.createElement("div");
-			// divEmail.classList.add('memEmail');
-			// var divPoints = document.createElement("div");
-			// divPoints.classList.add('memPoints');
-
-			// divName.innerHTML =  `<ul class='memList'> <li>${data[i].fname}</li> <li>${data[i].lname}</li> <li>${data[i].email}</li> <li>${data[i].points}</li> </ul>`;
-
-			divName.innerHTML =  `<table class='memList' border='1'> <tr><td>${data[i].fname}</td> <td>${data[i].lname}</td> <td>${data[i].email}</td> <td>${data[i].points}</td></tr> </table>`;
+			table.innerHTML =  `<tr><td>${data[i].fname}</td> <td>${data[i].lname}</td> <td>${data[i].email}</td> <td>${data[i].points}</td></tr>`;
 			
-			mainContainer.appendChild(divName);
-			// mainContainer.appendChild(divEmail);
-			// mainContainer.appendChild(divPoints)
+			mainContainer.appendChild(table);
 		}
 	}
 
-	
+	const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+  const comparer = (idx, asc) => (a, b) => ((v1, v2) => 
+    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+  // do the work...
+  document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+      const table = th.closest('table');
+      Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+          .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+          .forEach(tr => table.appendChild(tr) );
+  })));
