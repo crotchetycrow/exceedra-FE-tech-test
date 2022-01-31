@@ -26,11 +26,15 @@ I learnt a lot during this process and I'm pleased with what I've learnt despite
 
 I encountered many bugs whilst trying to get my dynamic registration page/sign box to cooperate - those were all resolved and that feature works as intended.
 
-The latest bug on my main branch which has unfortunately prevented my API from displaying data has as yet been unresolved. I'm receiving a TypeError: Cannot read properties of undefined (reading '0')
-at appendData (welcome.js:79:189)
-at welcome.js:93:3
+The latest bug on my main branch which has unfortunately prevented my API from displaying data has as yet been unresolved. I'm receiving
+
+`TypeError: Cannot read properties of undefined (reading '0')`
+`at appendData (welcome.js:79:189)`
+`at welcome.js:93:3`
 
 This implies that the code is being loaded before the DOM however my solutions haven't proved fruitful (document.addEventlistener('DOMContentLoaded') & moving the script tag to the bottom of the HTML).
+
+When I removed the nested for loop `for (var k = 0; k < data[i].preferences.length; i++)` and doesn't seem to be broken but this was working before I git committed, so I'm unsure what's gone wrong.
 
 This project has been a series of things breaking for no apparent reason - most functionality was working before I turned on my laptop this morning.
 
