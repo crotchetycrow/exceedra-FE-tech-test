@@ -207,7 +207,8 @@ p {
   margin: 10px;
 }
 
-.reg-container .user .form-box form input {
+.reg-container .user .form-box form input,
+.reg-container .user .form-box form select {
   /* display: inline-grid; */
   position: relative;
   width: 100%;

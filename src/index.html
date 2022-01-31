@@ -54,24 +54,27 @@
                   <div class="img-box"><img src="/src/img/310075.svg" alt="" height="500px" width="800px"></div>
                     <div class="form-box">
 
-                      <form name="reg-form" action="welcome.html" required> 
+                      <form name="reg-form" action="welcome.html" onclick="validateForm()" required> 
 
                         <!-- To connect to my API -->
                         <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <input type="text" id="fname" name="fname" placeholder="Your name..">
                     
                         <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <input type="text" id="lname" name="lname" placeholder="Your last name..">
             
                         <label for="email">Email Address</label>
-                        <input type="text" id="email" name="emailAddress" placeholder="example@email.com">
+                        <input type="text" id="email" name="email" placeholder="example@email.com">
             
                         <label for="password">Create Password</label>
                         <input type="password" id="password" placeholder="Password">
                         
                         <label for="password">Confirm Password</label>
-                          <input type="password" id="confirm-password" placeholder="Confirm password">
+                        <input type="password" id="confirm-password" placeholder="Confirm password">
 
+                        <label for="country">Country</label>
+                        <select name="countries" id="countries"></select>
+                        
                           <button id="reg-btn">Register</button>
         
                         <p class="login">Already have an account? <a href="#" onclick="event.preventDefault(); setToggle();">Log in</a></p>
@@ -129,7 +132,7 @@
 
         </footer>
     </header>
-    <script src="/src/index.js"></script>
-
+    
   </body>
+  <script src="/src/index.js"></script>
 </html>
