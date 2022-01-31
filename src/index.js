@@ -1,3 +1,5 @@
+'use strict';
+
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -8,20 +10,6 @@ const mainContainer = document.getElementById("myData");
 
 var form = document.querySelector('form');
 var data = new FormData(form);
-
-
-// Fetching API
-
-// fetch('https://mock-members-api.herokuapp.com/members')
-// 	.then(function (response) {
-// 		return response.json();
-// 	})
-// 	.then(function (data) {
-// 		appendData(data);
-// 	})
-// 	.catch(function (err) {
-// 		console.log(err);
-// 	});
 
 // Functions
 
@@ -56,7 +44,23 @@ function validateForm() {
 	});
 }
 
-// Serialising form data allowing it to console log
+// Country selector, pokemon and star wars connector
+document.addEventListener('DOMContentLoaded', () => {
+
+	// Fetching API
+
+// fetch('https://mock-members-api.herokuapp.com/members')
+// 	.then(function (response) {
+// 		return response.json();
+// 	})
+// 	.then(function (data) {
+// 		appendData(data);
+// 	})
+// 	.catch(function (err) {
+// 		console.log(err);
+// 	});
+
+	// Serialising form data allowing it to console log
 
 document.getElementById("reg-btn").addEventListener('submit', function (event) {
 
@@ -100,9 +104,6 @@ function appendData(data) {
 		mainContainer.appendChild(table);
 	}
 }
-
-// Country selector, pokemon and star wars connector
-document.addEventListener('DOMContentLoaded', () => {
 
   const selectDrop = document.querySelector('#countries');
   // const selectDrop = document.getElementById('countries');
