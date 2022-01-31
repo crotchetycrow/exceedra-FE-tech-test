@@ -20,6 +20,8 @@ On that note, when it was working, I found it difficult to action my form to the
 
 I'm disappointed I was unable to resolve the latest bug with displaying the data of my API as I worked hard getting the data to display the way I wanted to. Given another day or two I'm confident I'd have everything the way I want it.
 
+I learnt a lot during this process and I'm pleased with what I've learnt despite being so confused for half the week with mysterious bugs.
+
 ### Bugs
 
 I encountered many bugs whilst trying to get my dynamic registration page/sign box to cooperate - those were all resolved and that feature works as intended.
