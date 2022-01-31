@@ -49,16 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Fetching API
 
-// fetch('https://mock-members-api.herokuapp.com/members')
-// 	.then(function (response) {
-// 		return response.json();
-// 	})
-// 	.then(function (data) {
-// 		appendData(data);
-// 	})
-// 	.catch(function (err) {
-// 		console.log(err);
-// 	});
+fetch('https://mock-members-api.herokuapp.com/members')
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (data) {
+		appendData(data);
+	})
+	.catch(function (err) {
+		console.log(err);
+	});
 
 	// Serialising form data allowing it to console log
 
