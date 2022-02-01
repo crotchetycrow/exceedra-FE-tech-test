@@ -14,7 +14,7 @@ There are some notable changes I will make to this project, namely there is a lo
 
 The footer has a lot of spacing between it, otherwise I'm satisfied with how it looks given how other features took over my time.
 
-I'm particularly happy with my registration/log in feature the dynamic switching between sign up and sign in was quite a challenge to get right. In the end the posting functionality broke as well as console logging the json data. I'm not sure where that broke considering I did change any code at the time.
+I'm particularly happy with my registration/log in feature the dynamic switching between sign up and sign in was quite a challenge to get right. In the end the posting functionality broke as well as console logging the json data. I'm not sure where that broke considering I didn't change any code at the time.
 
 On that note, when it was working, I found it difficult to action my form to the welcome.html page whilst simultaneously console logging the data.
 
